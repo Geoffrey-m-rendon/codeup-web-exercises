@@ -1,10 +1,8 @@
 "use strict";
 
 while (true) {
-    let numberToSkip = prompt("Please enter an odd number between 1 and 50: ");
-    numberToSkip = parseInt(numberToSkip);
-
-    if (numberToSkip >= 1 && numberToSkip <= 50 && numberToSkip % 2 !== 0) {
+    let numberToSkip = prompt("Enter an odd number between 1 and 50: ");
+        if (numberToSkip >= 1 && numberToSkip <= 50 && numberToSkip % 2 !== 0) {
         console.log("Number to skip is: " + numberToSkip);
 
         for (let i = 1; i <= 50; i++) {
@@ -21,6 +19,6 @@ while (true) {
 
         break;
     } else {
-        alert("Invalid input. Please enter a valid odd number between 1 and 50.");
+        alert("Invalid input. We need Odd number between 1 and 50.");
     }
 }
