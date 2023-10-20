@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 /** 2.)---Create a function named (showMultiplicationTable) that accepts a
 * number and console.logs the multiplication table for that number (1-10)
