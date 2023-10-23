@@ -6,21 +6,24 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-     let  names = ['Joe', 'Mary', 'Ann', 'Bob']
+     const  names = ['Joe', 'Mary', 'Ann', 'Bob'];
     
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-       console.log("There four elements in the 'names' array");
+       console.log(names.length);
 
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-      console.log(names)
+      console.log(names[0]);
+      console.log(names[1]);
+      console.log(names[2]);
+      console.log(names[3]);
 
     /**
      * TODO:
@@ -28,7 +31,7 @@
      * array.
      */
     for(let name = 0; name < names.length; name++){
-        console.log("Index, "  +  name  + names[name]);
+        console.log(names[1]);
     }
 
     /**
@@ -51,23 +54,30 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    function first(arr) {
+      return arr[0];
+    }
+    console.log(first(names));
+    console.log(first([1, 2, 3, 4, 5]));
 
-    let arr=[1, 2, 3, 4,];
-
-    function first() {
-        if(arr === first);{
-            console.log(first());
-        }
+    function sec(arr){
+        return arr [2];
+        console.log(first(names));
+        console.log(first([1, 2, 3, 4, 5]));
+        console.log(sec(names));
+        console.log(sec([1, 2, 3, 4, 5]));
     }
 
-    function sec(){
-        if(arr);{
-            return [2];
-        }
-    }
-
-    function last(){
+    function last(arr){
+        return arr[arr.length - 1];
          console.log(last.length);
         }
+
+    console.log(first(names));
+    console.log(first([1, 2, 3, 4, 5]));
+    console.log(sec(names));
+    console.log(sec([1, 2, 3, 4, 5]));
+    console.log(last(names));
+    console.log(last([1, 2, 3, 4, 5]));
 
 })();
