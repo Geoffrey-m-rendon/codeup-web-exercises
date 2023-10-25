@@ -3,7 +3,7 @@
 
     // create a circle object
     var circle = {
-        radius: 5,
+        radius: 3,
 
         getArea: function () {
             // TODO: complete this method
