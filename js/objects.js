@@ -14,10 +14,10 @@
 
     const person ={
         firstName: "Geoffrey",
-        lastName: "Rendon",
+        lastName: "Rendon"
     }
-    //   console.log(person.firstName)
-    //   console.log(person.lastName)
+      console.log(person.firstName)
+      console.log(person.lastName)
 
 
     /**
@@ -29,16 +29,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    var personGreet ={
-        firstName: "Geoffrey",
-        lastName: "Rendon",
-         add: person.sayHello = function () {
-            return "Hello from " + person.firstName + " " + person.lastName + "!";
-        }
+    person.sayHello = function () {
+        return `hello from ${this.firstName} ${this.lastName}`;
     }
-      console.log(person.firstName);
-      console.log(person.lastName);
       console.log(person.sayHello());
+      console.log("----");
 
 
     /**
@@ -56,7 +51,7 @@
      */
 
 
-    var shoppers = [
+    const shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
@@ -69,12 +64,13 @@
           let total = amount * discount;
 
           console.log( name + " Bought, " + amount.toFixed(2) + "$ worth of products");
-
           if(amount < 200){
-              console.log("Sorry " + name +   ", you did not spend enough to earn a discount.")  ;
+              console.log("Sorry " + name +   ", you did not spend enough to earn a discount.");
+              console.log("----");
           } else {
               if (amount > 200){
                   console.log( name + "'s " + "Discount is " + (total.toFixed(2) + "$"));
+                  console.log("----");
               }
           }
       });
@@ -129,6 +125,7 @@
      *      ---
      *      ...
      */
+
     for (var i = 0; i < books.length; i++) {
         var book = books[i];
         var bookNumber = i + 1;
@@ -138,6 +135,7 @@
         console.log("Book # " + bookNumber);
         console.log("Title: " + title);
         console.log("Author: " + authorFullName);
+        console.log("---");
     }
 
 
