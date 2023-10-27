@@ -6,8 +6,6 @@ while (num <= 65536) {
     num *= 2;
 }
 //
-
-
 let allCones = Math.floor(Math.random() * 51) + 50;
 
 do {
