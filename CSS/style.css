@@ -1,0 +1,16 @@
+html{
+ background-color: #023020;
+}
+
+h1.fancy-header {
+    color: #ffd9b3;
+    text-align: center;
+}
+
+p {
+   color: #ffd9b3;
+}
+
+hr{
+    border-color: #ffd9b3;
+}
