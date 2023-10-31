@@ -1,3 +1,7 @@
+img {
+    width: 250px;
+}
+
 html{
  background-color: #023020;
 }
@@ -14,3 +18,4 @@ p {
 hr{
     border-color: #ffd9b3;
 }
+

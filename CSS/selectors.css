@@ -10,7 +10,7 @@
     that are a descendent of id="container"
     and have a class of "fancy-header" */
 
-h1.neonText {
+#container h1.neonText {
     color: #ffd9b3;
     text-shadow:
             0 0 5px black,
@@ -36,7 +36,7 @@ em {
 
 /*  selector for all "anchor"x beige
     that are a direct child of an element with class="article" */
-.article > .anchor{
+.article > .a{
     float: right;
 }
 
