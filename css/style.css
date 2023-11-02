@@ -1,0 +1,8 @@
+body {
+	margin 0;
+	font-family: system-ui;
+}
+.hero {
+	background-color: #000000;
+	background-image: url("/fall_theme.jpeg");
+}
