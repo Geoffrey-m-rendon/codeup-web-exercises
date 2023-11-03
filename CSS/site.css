@@ -2,19 +2,19 @@ h1.fancy-header {
     color: blue;
 }
 
-/* unvisited link (:link) */
+
 a:link {
     color:red;
 }
-/* visited link (:visited) */
+
 a:visited {
     color:black;
 }
-/* mouse hover over link (:hover) */
+
 a:hover {
     color:blue;
 }
-/* active or selected link (:active) */
+
 a:active {
     color:green;
 }
