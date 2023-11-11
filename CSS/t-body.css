@@ -1,0 +1,28 @@
+h1{
+    display: block;
+    width: 100%;
+    font-size: 4rem;
+    word-spacing: 0.3em;
+    margin-bottom: 35px;
+}
+
+.bg-success{
+    height: 7px;
+}
+
+h2.text-primary{
+    margin-top: 20px;
+    padding-left: 0.1rem;
+}
+
+/*@media screen and (min-width: 760px){*/
+/*    ul{*/
+/*        display: flex;*/
+/*        justify-content: space-evenly;*/
+/*        flex-direction: row;*/
+/*    }*/
+/*    .mufu{*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/

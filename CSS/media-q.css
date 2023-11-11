@@ -1,0 +1,24 @@
+/**{*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+.title{
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+
+}
+
+@media screen and (min-width: 300px){
+    body{
+        background-color: #b4d455;
+    }
+}
+
+
+@media screen and (min-width: 600px){
+    body{
+        background-color: #0815ea;
+    }
+}
+
