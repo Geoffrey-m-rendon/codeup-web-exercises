@@ -13,7 +13,7 @@
 
 
         setTimeout(function() {
-            profileName.textContent = "DOC OCT";
+            profileName.textContent = "Doc Oct";
         }, 4000);
 
     });
@@ -27,7 +27,7 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-        const togglercol = document.getElementById('toggle-btn');
+        const togglercol = document.getElementById('profile-card');
         const colorsRun = ["red", "blue", "orange", "yellow", "purple", "green", "purple-violet", "black", "olive", "grey",];
         let colorIndx = 0;
 
