@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parks</title>
+    <style>
+        .NPF {
+            text-align: center;
+        }
+
+        .highlighted {
+            background-color: yellow;
+        }
+
+        li {
+            transition: font-weight 0.3s ease;
+        }
+
+        li.bold {
+            font-weight: bold;
+        }
+
+        h3.color{
+            color: #0815ea;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1 class="NPF">National Parks FAQ</h1>
+
+<dl>
+    <dt><b>How many people visit the national parks?</b></dt>
+    <dd>Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
+
+    <!-- Add other FAQ entries here -->
+
+    <dt><b>What is the National Park Service budget?</b></dt>
+    <dd>Fiscal Year (FY) 2014 Enacted: $2.98 billion.</dd>
+
+    <dt><b>Can I bring my pet to a national park?</b></dt>
+    <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities.</dd>
+
+    <dt><b>How do I apply for a job with the National Park Service?</b></dt>
+    <dd>National Park Service jobs, including both permanent and seasonal positions, are listed on USAJOBs.</dd>
+
+    <dt><b>What do I need to know about driving off-road in national parks?</b></dt>
+    <dd>Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
+</dl>
+
+<div id="unorLi">
+    <div>
+        <h3>Badlands</h3>
+        <ul>
+            <li>Located in South Dakota.</li>
+            <li>Characterized by rugged canyons, towering spires, and unique eroded buttes.</li>
+            <li>Rich in fossil deposits, providing insights into ancient mammals like the rhinoceros and saber-toothed cat.</li>
+            <li>Offers striking scenic views, especially during sunrise and sunset.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Denali</h3>
+        <ul>
+            <li>Located in Alaska.</li>
+            <li>Home to the tallest peak in North America, Denali (formerly known as Mount McKinley).</li>
+            <li>Encompasses six million acres of wilderness.</li>
+            <li>Rich biodiversity includes grizzly bears, wolves, caribou, and Dall sheep.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Everglades</h3>
+        <ul>
+            <li>Situated in Florida, it's the largest tropical wilderness of any kind in the U.S.</li>
+            <li>Known for its unique ecosystem of wetlands, mangroves, and sawgrass marshes.</li>
+            <li>Home to a variety of wildlife, including alligators, manatees, and a diverse array of bird species.</li>
+            <li>Designated as an International Biosphere Reserve and a World Heritage Site.</li>
+        </ul>
+    </div>
+</div>
+                                                <!--Yellow BTN Click Event-->
+<button id="highlightBtn">Highlight</button>
+
+<script>
+    document.getElementById("highlightBtn").addEventListener("click", function () {
+        const parkDivs = document.querySelectorAll("#unorLi > div");
+
+        parkDivs.forEach(function (parkDiv) {
+
+            const lastLi = parkDiv.querySelector("ul li:last-child");
+
+            if (lastLi.classList.contains("highlighted")) {
+                lastLi.classList.remove("highlighted");
+            } else {
+                lastLi.classList.add("highlighted");
+            }
+        });
+    });
+
+    //                         when h3 is click font-weight bold is shown for li item  */
+    const h3Elements = document.querySelectorAll('h3');
+
+    h3Elements.forEach(h3 => {
+        h3.addEventListener('click', function () {
+            const clickedH3 = this;
+
+            const siblingUl = clickedH3.nextElementSibling;
+
+            if (siblingUl && siblingUl.tagName === 'UL') {
+                siblingUl.querySelectorAll('li').forEach(li => {
+                    li.classList.toggle('bold');
+                });
+            }
+        });
+    });
+
+    const liClick = document.querySelectorAll('li');
+
+    liClick.forEach(li => {
+        li.addEventListener('click', function () {
+            const clickLi = this;
+
+            const parentUl = clickLi.parentElement;
+
+            if(parentUl && parentUl.tagName === 'UL') {
+                const h3Element = parentUl.previousElementSibling;
+                if (h3Element && h3Element.tagName === 'H3') {
+                    h3Element.style.color = 'blue';
+            }
+        }
+    });
+});
+
+      </script>
+</body>
+</html>
