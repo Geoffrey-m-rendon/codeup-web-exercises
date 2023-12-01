@@ -1,0 +1,11 @@
+*{
+    background-color: teal ;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+

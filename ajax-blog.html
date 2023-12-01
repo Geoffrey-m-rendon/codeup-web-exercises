@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/ajax_style.css">
+    <title>Blog Spot</title>
+</head>
+<body>
+<div id="posts"></div>
+<script>
+    "use strict";
+    document.addEventListener('DOMContentLoaded', function () {
+        // AJAX request to fetch blog data using fetch API
+        fetch('data/blog.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                displayBlogPosts(data);
+            })
+            .catch(error => {
+                console.error('Error fetching blog data:', error);
+            });
+
+        function displayBlogPosts(posts) {
+            const postsContainer = document.getElementById('posts');
+
+            let htmlString = '';
+
+            posts.forEach(function (post) {
+                htmlString += `
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5 class="card-title">${post.title}</h5>
+                                <p class="card-text">${post.content}</p>
+                            </div>
+                        </div>
+                    `;
+            });
+            postsContainer.innerHTML = htmlString;
+        }
+    });
+</script>
+</body>
+</html>
