@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>First Map</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Hide the scroll bars */
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      overflow: auto; /* Enable scrolling for the map */
+    }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VvZmZyZXktbS1yZW5kb24iLCJhIjoiY2xwbGcwNDk3MDF1NTJpbzUxYjllcmk1ZCJ9.4c8QIu78-MQfNWbgb_3z4g';
+  const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    center: [-97.966857,29.581015], // starting position [lng, lat]
+    zoom: 5, // starting zoom
+    scrollZoom: true // Enable scroll zooming
+  });
+
+  const popup1 = new mapboxgl.Popup({ offset: 25 }).setText(
+          'Milly Ritas, Good Margaritas for a long day.'
+  );
+
+  const marker1 = new mapboxgl.Marker({ color: '#FFFF00' })
+          .setLngLat([-97.965122, 29.580974])
+          .setPopup(popup1)
+          .addTo(map);
+
+  const popup2 = new mapboxgl.Popup({ offset: 25 }).setText(
+          'rosies pizza, cheap good pizza. for quick dinner for the family.'
+  );
+
+  const marker2 = new mapboxgl.Marker({ color: '#FF5733' })
+          .setLngLat([-97.955122, 29.580974])
+          .setPopup(popup2)
+          .addTo(map);
+
+  const popup3 = new mapboxgl.Popup({ offset: 25 }).setText(
+          'Taco Tejano, simply Great Tacos.'
+  );
+
+  const marker3 = new mapboxgl.Marker({ color: '#33FF57' })
+          .setLngLat([-97.975122, 29.580974])
+          .setPopup(popup3)
+          .addTo(map);
+
+</script>
+</body>
+</html>
