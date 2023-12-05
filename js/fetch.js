@@ -1,8 +1,7 @@
 // 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
 
 const url = 'https://jsonplaceholder.typicode.com/todos/1';
-const accessToken = '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';
-
+// new token from  git
 fetch(url, {
     headers: {
         'Authorization': `Bearer ${accessToken}`,
